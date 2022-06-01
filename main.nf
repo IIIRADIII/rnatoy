@@ -115,3 +115,7 @@ process makeTranscript {
 workflow.onComplete { 
 	log.info ( workflow.success ? "Done!" : "Oops .. something went wrong" )
 }
+
+k8s {
+   namespace = "nextflow"
+}
